@@ -31,7 +31,7 @@ void counting_sort(int *array, size_t size)
 
 	for (i = 0; i < size; i++)
 		countArray[array[i]]++;
-	
+
 	for (i = 1; i <= max; i++)
 		countArray[i] += countArray[i - 1];
 	print_array(countArray, max + 1);

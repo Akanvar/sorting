@@ -44,8 +44,12 @@ void merge_sort(int *array, size_t size)
  * @array: array of integers
  * @left: left sub-array
  * @right: right sub-array
+ * @nLeft: size of left array
+ * @nRight: size of right array
+ * @size: size of original array
  */
-void merge(int *array, int *left, size_t nLeft, int *right, size_t nRight, size_t size)
+void merge(int *array, int *left, size_t nLeft, int *right, size_t nRight,
+		size_t size)
 {
 	size_t x, y, z;
 

@@ -34,6 +34,8 @@ void counting_sort(int *array, size_t size);
 void merge_sort(int *array, size_t size);
 void merge(int *array, int *left, size_t nLeft, int *right, size_t nRight,
 		size_t size);
+void maxHeap(int *array, size_t heap, int idx, size_t size);
+void heap_sort(int *array, size_t size);
 
 
 #endif

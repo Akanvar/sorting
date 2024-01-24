@@ -35,14 +35,14 @@ listint_t *swap_node(listint_t **list, listint_t *node)
 void insertion_sort_list(listint_t **list)
 {
 	listint_t *node;
-	
+
 	if (*list == NULL || (*list)->next == NULL)
 		return;
 
 	node = (*list)->next;
-	while(node)
+	while (node)
 	{
-		while((node->prev) && (node->prev->n > node->n))
+		while ((node->prev) && (node->prev->n > node->n))
 		{
 			node = swap_node(list, node);
 			print_list(*list);
