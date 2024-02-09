@@ -1,5 +1,6 @@
 import json
 import os.path
+import user
 
 
 class FileStorage:
@@ -19,7 +20,13 @@ class FileStorage:
             file.write(json_string)
 
     def reload(self):
+        obj_dic = {}
         if self.__file_path and os.path.getsize(self.__file_path) != 0:
             with open(self.__file_path, 'r') as file:
                 self.__objects = json.load(file)
+                # for key, value in obj_dic.items():
+                #     # class_name, class_id = key.split('.')
+                #     # cls = eval(class_name)
+                #     instance = user.User()
+                #     self.__objects[key] = instance
 
