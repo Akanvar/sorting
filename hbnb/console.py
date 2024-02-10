@@ -88,7 +88,11 @@ class HBNBCommand(cmd.Cmd):
         if len(content) == 1 and content[0] != "User":
             print("** class doesn't exist **")
         else:
-            print(str(__init__.storage.all()))
+            obj_list = []
+            all_objects = __init__.storage.all()
+            for key in all_objects.keys():
+                obj_list.append(str(all_objects[key]))
+            print(obj_list)
 
     def emptyline(self):
         pass
